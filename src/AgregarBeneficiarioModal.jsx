@@ -8,11 +8,13 @@ const AgregarBeneficiarioModal = ({ showModal, onClose }) => {
 
 
   const handleModalContainerClick = () => {
+    e.stopPropagation(); // Evita que el evento se propague al hacer clic dentro del modal
     document.getElementById('modal-container').classList.add('out');
     document.body.classList.remove('modal-active');
     setModalActive(false);
   };
 
+  // const modalClassName =  showModal ? 'modal show one' : 'modal hide one';
   const modalClassName = showModal ? 'modal show one' : 'modal show one out';
 
   return (
