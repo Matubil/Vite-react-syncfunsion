@@ -5,11 +5,7 @@ const AgregarBeneficiarioModal = ({ showModal, onClose }) => {
   const [modalActive, setModalActive] = useState(false);
   const [buttonId, setButtonId] = useState('');
 
-  const handleButtonClick = (id) => {
-    setButtonId(id);
-    setModalActive(true);
-    document.body.classList.add('modal-active');
-  };
+
 
   const handleModalContainerClick = () => {
     document.getElementById('modal-container').classList.add('out');
@@ -17,7 +13,7 @@ const AgregarBeneficiarioModal = ({ showModal, onClose }) => {
     setModalActive(false);
   };
 
-  const modalClassName = showModal ? 'modal show one' : 'modal hide one';
+  const modalClassName = showModal ? 'modal show one' : 'modal show one out';
 
   return (
     <div id="modal-container" className={modalClassName} onClick={handleModalContainerClick}>
