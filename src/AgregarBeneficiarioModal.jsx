@@ -5,7 +5,7 @@ const AgregarBeneficiarioModal = ({ showModal, onClose }) => {
   const [modalActive, setModalActive] = useState(false);
   const [buttonId, setButtonId] = useState('');
 
-
+  var modalClassName = 'modal hide one'
 
   const handleModalContainerClick = () => {
     e.stopPropagation(); // Evita que el evento se propague al hacer clic dentro del modal
@@ -14,8 +14,7 @@ const AgregarBeneficiarioModal = ({ showModal, onClose }) => {
     setModalActive(false);
   };
 
-  // const modalClassName =  showModal ? 'modal show one' : 'modal hide one';
-  const modalClassName = showModal ? 'modal show one' : 'modal show one out';
+  modalClassName = showModal ? 'modal show one' : 'modal show one out';
 
   return (
     <div id="modal-container" className={modalClassName} onClick={handleModalContainerClick}>
