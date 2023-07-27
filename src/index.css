@@ -1,69 +1,346 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+body{
+  background-color: rgb(32 33 36);
+  color: white;
+}
+
+#games{
+  color: white!important;  
+}
+
+#msg{
+  color: white!important;
+}
+
+
+.fabric .empimg {
+  background-color: #0078d6;
+}
+
+.material .empimg {
+  background-color: #e3165b;
+}
+
+.highcontrast .empimg {
+  background-color: #ffd939;
+}
+
+_:-ms-fullscreen,
+:root .highcontrast .e-userimg.sf-icon-Male::before,
+_:-ms-fullscreen,
+:root .highcontrast .e-userimg.sf-icon-FeMale::before {
+  color: black;
+}
+
+.highcontrast .e-userimg.sf-icon-Male::before,
+.highcontrast .e-userimg.sf-icon-FeMale::before {
+  color: black;
+}
+
+.bootstrap .empimg {
+  background-color: #0078d6;
+}
+
+.bootstrap4 .empimg,
+.bootstrap5 .empimg {
+  background-color: #0078d6;
+}
+
+.tailwind .empimg {
+  background-color: #4f46e5;
+}
+
+.fluent .empimg {
+  background-color: #106EBE;
+}
+
+#Emptext {
+  top: -12px;
+  left: 41px;
+  position: relative;
+}
+
+.empimg {
+  height: 27px;
+  width: 29px;
+  border-radius: 14px;
+  background-color: #e3165b;
+}
+
+#overviewgrid.e-rtl #Emptext {
+  top: -12px;
+  left: -41px;
+  position: relative;
+}
+
+.e-userimg.sf-icon-Male::before,
+.e-userimg.sf-icon-FeMale::before {
+  font-size: 13px;
+}
+
+.e-userimg.sf-icon-Male,
+.e-userimg.sf-icon-FeMale {
+  margin: 0px 8px;
+  line-height: 26px;
+  color: white;
+  font-size: 13px;
+}
+
+.e-userimg.sf-icon-Male::before {
+  content: '\e700';
+}
+
+.e-userimg.sf-icon-FeMale::before {
+  content: '\e701';
+}
+
+
+.highcontrast #overviewgrid td.e-rowcell.e-selectionbackground.e-active {
+  background-color: transparent;
+  color: white;
+}
+
+.e-bigger #overviewgrid .statustxt {
+  position: relative;
+}
+
+#overviewgrid td.e-rowcell.e-selectionbackground.e-active {
+  background-color: transparent;
+}
+
+.Mapimage .e-image {
+  height: 13px;
+  width: 14px;
+}
+
+td.e-rowcell .statustxt.e-activecolor {
+  color: #00cc00;
+  position: relative;
+  top: 9px;
+}
+
+td.e-rowcell .statustxt.e-inactivecolor {
+  color: #e60000;
+  position: relative;
+  top: 9px;
+}
+
+.bootstrap5 td.e-rowcell .statustxt.e-inactivecolor,
+.bootstrap5 td.e-rowcell .statustxt.e-activecolor {
+  top: 8px;
+}
+
+.bootstrap5 .e-checkboxfiltertext .statustemp .statustxt.e-activecolor,
+.bootstrap5 .e-checkboxfiltertext .statustemp .statustxt.e-inactivecolor {
+  position: relative;
+  top: 1.5px;
+}
+
+.e-bigger.bootstrap5 .e-checkboxfiltertext .statustemp .statustxt.e-activecolor,
+.e-bigger.bootstrap5 .e-checkboxfiltertext .statustemp .statustxt.e-inactivecolor {
+  top: -0.5px;
+}
+
+.bootstrap5 .e-checkboxfiltertext #Trusttext {
+  margin-left: -4px;
+}
+
+.statustemp.e-inactivecolor {
+  background-color: #ffd7cc;
+  width: 64px;
+}
+
+.statustemp.e-activecolor {
+  background-color: #ccffcc;
+  width: 57px;
+}
+
+.statustxt.e-activecolor {
+  color: #00cc00;
+}
+
+.statustxt.e-inactivecolor {
+  color: #e60000;
+}
+
+.statustemp {
+  position: relative;
+  height: 19px;
+  border-radius: 5px;
+  text-align: center
+}
+
+.highcontrast #msg {
+  color: #FFFFFF
+}
+
+#msg {
+  font-family: "Segoe UI", "GeezaPro", "DejaVu Serif", sans-serif;
+  font-size: 14px;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  opacity: 0.95;
+  color: #333;
+  float: right;
+  margin-top: 3px;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+@media only screen and (max-width: 370px) {
+  #msg {
+    float: left;
+    margin-top: 3px;
+  }
+
+  #overviewgrid {
+    margin-top: 36px;
+  }
 }
 
-body {
-  margin: 0;
+#samplecontainer {
+  padding-top: 5px;
+}
+
+#myProgress {
+  position: relative;
+  height: 18px;
+  width: 10em;
+  text-align: left;
+  background-color: white;
+}
+
+.highcontrast #overviewgrid #myProgress {
+  background-color: black;
+}
+
+#myBar {
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  background-color: #00b300;
+}
+
+#myBar.progressdisable {
+  background-color: #df2222;
+}
+
+#pbarlabel {
+  position: relative;
+  left: 10px;
+  line-height: 18px;
+  font-size: 10px;
+  color: white;
+}
+
+.custom-rating.e-rating-container .e-rating-item-container,
+.e-bigger .custom-rating.e-rating-container .e-rating-item-container .e-rating-icon,
+.e-bigger.custom-rating.e-rating-container .e-rating-item-container .e-rating-icon {
+  font-size: 11px;
+}
+
+.custom-rating.e-rating-container .e-rating-item-container .e-rating-icon {
+  -webkit-text-fill-color: lightgrey;
+  -webkit-text-stroke: 1px lightgrey;
+}
+
+.custom-rating.e-rating-container .e-rating-item-container.e-rating-selected .e-rating-icon {
+  background: linear-gradient(to right, #ffa600 var(--rating-value), #ffa600 var(--rating-value));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #ffa600;
+}
+
+/*====================== SECCION DE HEADER BOTONES =======================*/
+.header-page {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.header_page__title{
+  font-size: 6rem
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4FD1C5;
+background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+.button::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(310px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.button:hover, .button:focus {
+  color: #313133;
+  transform: translateY(-3px);
+}
+
+.button:hover::before, .button:focus::before {
+  opacity: 1;
+}
+
+.button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.button:hover::after, .button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 100px;
+    height: 30px;
+    opacity: 1;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
   }
 }
+
+/*====================== FIN DE SECCION DE HEADER BOTONES =======================*/

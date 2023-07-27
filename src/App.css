@@ -14,6 +14,27 @@
   padding: 2rem;
   text-align: center;
 }
+/* 
+#sample{
+  margin-top: 150px!important;
+} */
+
+/* Estilos CSS para centrar el contenido verticalmente */
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.modal-body-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
 
 .logo {
   height: 6em;

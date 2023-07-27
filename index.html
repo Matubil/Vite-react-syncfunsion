@@ -4,10 +4,34 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Syncfusion React UI Components" />
+    <meta name="author" content="Syncfusion" />
+    <link href="https://cdn.syncfusion.com/ej2/21.1.35/bootstrap5.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/21.1.35/material3.css" rel="stylesheet">
     <title>Beneficiarios Page</title>
   </head>
-  <body>
-    <div id="root"></div>
+  <body class="bootstrap5"  onload="deshabilitarSegundoDiv()">
+    <div id='sample' style="margin: 100px"></div>
     <script type="module" src="/src/main.jsx"></script>
-  </body>
+  </body> 
 </html>
+<script>
+  function deshabilitarSegundoDiv() {
+    var divs = document.querySelectorAll('body > div');
+    if (divs.length >= 2) {
+      var segundoDiv = divs[1]; // El segundo div en el índice 1
+      segundoDiv.style.display = 'none';
+      if (divs.length >= 2) {
+        var tercerDiv = divs[2]; // El segundo div en el índice 1
+        tercerDiv.style.display = 'none';
+      }
+    }
+  }
+</script>
