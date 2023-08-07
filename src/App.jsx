@@ -113,17 +113,7 @@ function OverView() {
     { text: '100,000 Rows and 11 Columns', value: '100000' }
   ];
 
-  // Agregar el estado para controlar el modal
-  const [showModal, setShowModal] = React.useState(false);
 
-  // Función para mostrar el modal
-  const handleOpenModal = () => {
-    setShowModal(true);
-  };
-  // Función para ocultar el modal
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
   const fields = { text: 'text', value: 'value' };
   function onDataBound() {
     clearTimeout(clrIntervalFun);
@@ -171,9 +161,9 @@ function OverView() {
       gridInstance.setProperties({ dataSource: data });
     }, 100);
   }
-  const check = {
-    type: 'CheckBox'
-  };
+  // const check = {
+  //   type: 'CheckBox'
+  // };
   const select = {
     persistSelection: true,
     type: "Multiple",
@@ -200,28 +190,68 @@ function OverView() {
   const gridFilter = {
     type: 'Menu'
   };
-  const status = {
-    type: 'CheckBox',
-    itemTemplate: statusdetails
+  // const status = {
+  //   type: 'CheckBox',
+  //   itemTemplate: statusdetails
+  // };
+  // const trust = {
+  //   type: 'CheckBox',
+  //   itemTemplate: trustdetails
+  // };
+  // const rating = {
+  //   type: 'CheckBox',
+  //   itemTemplate: ratingDetails
+  // };
+
+
+  // Agregar el estado para controlar el modal
+  const [showModal, setShowModal] = React.useState(false);
+  var [modalTitle, setModalTitle] = React.useState("Agregar Beneficiario");
+
+  // Función para mostrar el modal
+  const handleOpenModal = (event) => {
+    const buttonTitle = event.target.title;
+    if(buttonTitle === 'Agregar Beneficiario'){
+      setModalTitle("Agregar Beneficiario");
+    }else{
+      setModalTitle("Editar Beneficiario");
+    }
+    // changeModalTitle()
+    setShowModal(true);
   };
-  const trust = {
-    type: 'CheckBox',
-    itemTemplate: trustdetails
+  // Función para ocultar el modal
+  const handleCloseModal = () => {
+    setShowModal(false);
   };
-  const rating = {
-    type: 'CheckBox',
-    itemTemplate: ratingDetails
+
+  // // Función para cambiar el título del modal
+  // const changeModalTitle = () => {
+  //   if (modalTitle === "Agregar Beneficiario") {
+  //     setModalTitle("Agregar Beneficiario");
+  //   } else {
+  //     setModalTitle("Editar Beneficiario");
+  //   }
+  // };
+
+  const handleEditClick = () => {
+    changeModalTitle("Agregar Beneficiario");
+    handleOpenModal();
   };
+
   function accionesTemplate(props) {
     return (
       <div>
-        <button className="e-icons e-edit-icon" title="Editar" onclick='editarBeneficiario()'><i class="fa-regular fa-pen-to-square"></i></button>
+        <button className="e-icons e-edit-icon" title="Editar Beneficiario" onClick={handleOpenModal}><i class="fa-regular fa-pen-to-square"></i></button>
       </div>
     );
   }
-  const handleClick = () => {
-    grid.current.addRecord();
-  };
+  // const handleClick = () => {
+  //   grid.current.addRecord();
+  // };
+
+
+
+
   return (
 
     <div className='control-pane'>
@@ -229,7 +259,7 @@ function OverView() {
       <div className='header-page'>
         <h1 className='header_page__title'>BENEFICIARIOS</h1>
         <div class="wrap">
-          <button class="button" onClick={handleOpenModal}>Agregar Beneficiario</button>
+          <button class="button" title="Agregar Beneficiario" onClick={handleOpenModal}>Agregar Beneficiario</button>
           {/* <button class="button" onclick='agregarBeneficiario()'>Agregar Beneficiario</button> */}
 
         </div>
@@ -255,7 +285,11 @@ function OverView() {
         </GridComponent>
       </div>
       {/* Agrega el componente del modal aquí */}
-      <AgregarBeneficiarioModal showModal={showModal} onClose={handleCloseModal} />
+      <AgregarBeneficiarioModal
+        showModal={showModal}
+        onClose={handleCloseModal}
+        modalTitle={modalTitle}
+      />
       <style>
         @import 'https://ej2.syncfusion.com/react/demos/src/grid/Grid/style.css';
       </style>
